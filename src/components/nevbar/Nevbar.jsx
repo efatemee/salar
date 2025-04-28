@@ -2,7 +2,7 @@ import styled from "./Nevbar.module.css";
 
 function Nevbar(props) {
   return (
-    <div >
+    <div className="">
       <div className="container">
         <div className={styled.header}>
           <h3>{props.title}</h3>
