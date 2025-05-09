@@ -1,0 +1,19 @@
+.articleWrapper{
+    height:  400px;
+    width: 24%;
+    box-shadow: 0px 3px 4px #bababa;
+    margin-bottom: 10px;
+}
+.articleWrapper img{
+    width: 100%;
+}
+.txt {
+    padding: 2% 5%;
+}
+.articleWrapper p{
+    font-size: 15px;
+}
+.articleWrapper span{
+    font-size: 12px;
+    color: rgb(125, 130, 128);
+}

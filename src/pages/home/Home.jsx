@@ -1,14 +1,25 @@
-import Nevbar from "../../components/nevbar/Nevbar";
+import Navbar from "../../components/navbar/Navbar";
+import styled from "./Home.module.css";
+import Article from "../../components/article/Article";
 
 function Home() {
   return (
-    <div>
-      <Nevbar title="سالار" />
+    <div className={styled.homeWrapper}>
+      <Navbar title="سالار" />
 
       <div className="container">
-        <h1 style={{ direction: "rtl" }} t>
-          home
-        </h1>
+        <h2>لیست مقالات</h2>
+        <div className={styled.articles}>
+        <Article/>
+        <Article/>
+        <Article/>
+        <Article/>
+        
+        <Article/>
+        <Article/>
+        <Article/>
+        <Article/>
+        </div>
       </div>
     </div>
   );

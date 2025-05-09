@@ -1,8 +1,8 @@
-import styled from "./Nevbar.module.css";
+import styled from "./Navbar.module.css";
 
-function Nevbar(props) {
+function Navbar(props) {
   return (
-    <div className="">
+    <div className={styled.headerWrapper}>
       <div className="container">
         <div className={styled.header}>
           <h3>{props.title}</h3>
@@ -16,4 +16,4 @@ function Nevbar(props) {
     </div>
   );
 }
-export default Nevbar;
+export default Navbar;
