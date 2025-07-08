@@ -11,7 +11,7 @@ function Navbar(props) {
               <Link to="/">لیست مقالات</Link>
             </li>
             <li>
-              <Link to="">مقالات جدید</Link>
+              <Link to="/creat-article">مقالات جدید</Link>
             </li>
             <li>
               <Link to="/about">درباره</Link>
