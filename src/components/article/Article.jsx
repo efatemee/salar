@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "./Article.module.css";
-import imga from "../../assets/image/1234.jpeg";
 
-function Article() {
+
+function Article(props) {
   return (
     <div className={styled.articleWrapper}>
-      <img src={imga} />
+      <img src={props.article.imageUrl} />
       <div className={styled.txt}>
-        <p>متغییر ها در جوا اسکریپت</p>
-        <span>خواندن 10 دقیقه ای</span>
+        <p>{props.article.title}</p>
+        <span>خواندن {props.article.readTime} دقیقه ای</span>
       </div>
     </div>
   );
