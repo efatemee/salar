@@ -1,3 +1,12 @@
 .newarticle{
     text-align: right;
 }
+.changeart label{
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+    font-size: 20px;}
+.changeart input{
+    width: 100%;
+
+}
