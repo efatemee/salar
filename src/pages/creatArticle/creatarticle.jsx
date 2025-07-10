@@ -3,23 +3,17 @@ import Footer from "../../components/footer/footer";
 import styled from "./creatarticle.module.css";
 import { useState } from "react";
 function CreatArticle() {
-  const [article, seArticle] = useState({
+  const [article, setArticle] = useState({
     title: "",
     date: "",
+    author: "",
+    readTime: "",
   });
   const changeart = (e) => {
-    switch (e.target.name) {
-      case "title":
-        seArticle({
-          title: e.target.value,
-        });
-        break;
-      case "date":
-        seArticle({
-          date: e.target.value,
-        });
-        break;
-    }
+    setArticle((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
   };
   console.log(article);
 
@@ -36,6 +30,14 @@ function CreatArticle() {
           <div className={styled.changeart}>
             <label>تاریخ</label>
             <input name="date" onChange={changeart} type="text" />
+          </div>
+          <div className={styled.changeart}>
+            <label>نویسنده</label>
+            <input name="author" onChange={changeart} type="text" />
+          </div>
+          <div className={styled.changeart}>
+            <label>مدت زمان خواندن</label>
+            <input name="readTime" onChange={changeart} type="text" />
           </div>
         </div>
       </div>
