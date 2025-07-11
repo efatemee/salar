@@ -11,6 +11,7 @@ function ArticlePage() {
   const Params = useParams();
   const [articles, setArticle] = useState([]);
   const [isloading, setIsloading] = useState(false);
+  
   useEffect(() => {
     setIsloading(true);
     axios
@@ -40,7 +41,7 @@ function ArticlePage() {
               <span>مدت زمان خواندن: {articles.readTime}دقیقه</span>
             </div>
 
-            <img src={articles.imageUrl} alt="Code" />
+            <img src={articles.imageUrl} />
             <p>{articles.content}</p>
           </div>
         </div>

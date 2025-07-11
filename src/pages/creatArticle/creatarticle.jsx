@@ -4,6 +4,7 @@ import styled from "./creatarticle.module.css";
 import { useState } from "react";
 import Input from "../../components/input/input";
 import Textarea from "../../components/textarea/textarea";
+import axios from "axios";
 function CreatArticle() {
   const [article, setArticle] = useState({
     title: "",
@@ -11,6 +12,7 @@ function CreatArticle() {
     author: "",
     readTime: "",
     massage: "",
+    Urlimg: "",
   });
   const changeart = (e) => {
     setArticle((prevState) => ({
@@ -24,7 +26,17 @@ function CreatArticle() {
       massage: e.target.value,
     }));
   };
-  console.log(article);
+  const buttonart = () => {
+    axios.post("http://localhost:3000/articles", {
+      id: "9",
+      imageUrl: article.Urlimg,
+      title: article.title,
+      readTime: article.readTime,
+      date: article.date,
+      athor: article.author,
+      content: article.massage,
+    });
+  };
 
   return (
     <div>
@@ -36,7 +48,11 @@ function CreatArticle() {
           <Input label="تاریخ" name="date" onChange={changeart} />
           <Input label="نویسنده" name="author" onChange={changeart} />
           <Input label="زمان خواندن" name="readTime" onChange={changeart} />
+          <Input label="لینک عکس" name="Urlimg" onChange={changeart} />
           <Textarea label="متن" onChange={changearea} />
+        </div>
+        <div className={styled.sendbutton}>
+          <button onClick={buttonart}>ارسال مقاله</button>
         </div>
       </div>
       <Footer />

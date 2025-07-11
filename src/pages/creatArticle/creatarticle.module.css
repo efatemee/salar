@@ -11,3 +11,17 @@
     height: 30px;
     text-align: right;
 }
+.sendbutton button{
+    margin-top: 5%;
+    border-radius: 5px;
+    padding: 10px 10px ;
+    background-color: rgb(128, 186, 186);
+    border: none;
+    color: azure;
+}
+.sendbutton{
+    text-align: right;
+}
+.sendbutton button:active{
+    opacity: 0.6;
+}
